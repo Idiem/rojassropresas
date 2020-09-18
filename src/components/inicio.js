@@ -13,6 +13,7 @@ import img3 from '../img/nino.png'
 import img4 from '../img/libros.png'
 import Footer from './footer';
 import ProductosL from './productos';
+import DocumentTitle from 'react-document-title'
 const varImg = {
     initial: {
         opacity:0,
@@ -65,6 +66,7 @@ const Inicio = ()=>{
         },6000);
     },[imagen]);
     return(
+        <DocumentTitle title='Inicio'>
     <div className="bg-gray-200">
         <Header inicio={true}/>
         <Element name='inicio'>
@@ -148,6 +150,7 @@ const Inicio = ()=>{
      <ProductosL/>
       <Footer/>
     </div>
+    </DocumentTitle>
     )
 }
 export default Inicio;

@@ -7,6 +7,7 @@ import whatsapp from '../img/whatsapp.png'
 import instragram from '../img/instagram.png'
 import Footer from './footer'
 import ProductosL from './productos'
+import DocumentTitle from 'react-document-title'
 const Producto = ()=>{
     const {id} = useParams()
     const [Idp,setIdp] = useState(id);
@@ -25,6 +26,7 @@ const Producto = ()=>{
         })
     }
     return(
+        <DocumentTitle title='Producto'>
         <div className="fondogra">
             <Header inicio={false}/>
             {!product.nombre?
@@ -100,6 +102,7 @@ const Producto = ()=>{
             <ProductosL id={true} changeId={ChangeId}/>
             <Footer/>
         </div>
+        </DocumentTitle>
     )
 }
 export default Producto
