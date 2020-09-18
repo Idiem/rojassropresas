@@ -1,6 +1,3 @@
-import { createHistory, useBasename } from 'history';
+import { createBrowserHistory } from 'history';
 
-const history = useBasename(createHistory)({
-    basename: '/root' 
-  });
 export default createBrowserHistory();
