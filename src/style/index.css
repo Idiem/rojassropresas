@@ -1,0 +1,164 @@
+.fondogra{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,0.5074404761904762) 0%, rgba(9,9,121,0.5102415966386555) 22%, rgba(0,212,255,0.3225665266106442) 100%);
+}
+html {
+  behavior: smooth;
+}
+@font-face{
+  font-family: 'Valentica';
+  src: url('./hello_valentica/Hello\ Valentina.ttf');
+}
+.letraValentica{
+  font-family: 'Valentica';
+}
+@font-face{
+  font-family: 'honey';
+  src: url('./honey_and_raspberries/Honey\ and\ Raspberries.ttf');
+}
+.letrahoney{
+  font-family: 'honey';
+}
+.fondo{
+    background-image: url('../img/ideas-decorar-jardin.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.h-120{
+  height: 28rem;
+}
+.loading {
+    display: flex;
+    animation-delay: 0s;
+  }
+  .loading .dot {
+    position: relative;
+    width: 2em;
+    height: 2em;
+    margin: 0.8em;
+    border-radius: 50%;
+  }
+  .loading .dot::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+    animation: wave 2s ease-out infinite;
+  }
+  .loading .dot:nth-child(1) {
+    background: #7ef9ff;
+  }
+  .loading .dot:nth-child(1)::before {
+    animation-delay: 0.1s;
+  }
+  .loading .dot:nth-child(2) {
+    background: #89cff0;
+  }
+  .loading .dot:nth-child(2)::before {
+    animation-delay: 0.2s;
+  }
+  .loading .dot:nth-child(3) {
+    background: #4682b4;
+  }
+  .loading .dot:nth-child(3)::before {
+    animation-delay: 0.3s;
+  }
+  .loading .dot:nth-child(4) {
+    background: #0f52ba;
+  }
+  .loading .dot:nth-child(4)::before {
+    animation-delay: 0.4s;
+  }
+  .loading .dot:nth-child(5) {
+    background: #000080;
+  }
+  .loading .dot:nth-child(5)::before {
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes wave {
+    50%,
+    75% {
+      transform: scale(2.5);
+    }
+    80%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+.cusriva{
+    font-family: "Cursiva";
+}
+.bx-shadown-black{
+    box-shadow: 0 0 10px black;
+}
+.bx-shadown-white{
+    box-shadow: 0 0 5px white;
+}
+
+.h-50p{
+    height: 50%;
+}
+.w-98p{
+    width: 98%;
+}
+.w-3p{
+    width: 3%;
+}
+.w-97p{
+    width: 97%;
+}
+.w-50p{
+    width: 50%;
+}
+.rotate-180-{
+    transform: rotate(180deg);
+}
+.w-20p{
+    width: 20%;
+}
+.w-80p{
+    width: 90%;
+}
+.h-93p{
+    height: 93%;
+}
+.h-7p{
+  height: 7%;  
+}
+.h-10p{
+    height: 10%;
+}
+.h-40p{
+    height: 40%;  
+}
+.h-60p{
+    height: 59%;
+}
+.h-70p{
+    height: 70%;
+}
+.h-30p{
+    height: 30%;
+}
+.h-80p{
+    height: 80%;
+}
+.h-20p{
+    height: 20%;
+}
+.w-90p{
+    width: 90%;
+}
+.text-size-20{
+    font-size: 20px;
+}
+.text-size-14{
+    font-size: 14px;
+}
+.xl\:w-98p{
+    width: 98%;
+}
