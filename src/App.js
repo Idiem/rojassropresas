@@ -1,6 +1,6 @@
 import React from 'react';
 import Inicio from './components/inicio'
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import {Router,Route,Switch} from 'react-router-dom'
 import Producto from './components/producto_id'
 import _404 from './components/NotFound'
 import history from './history';
