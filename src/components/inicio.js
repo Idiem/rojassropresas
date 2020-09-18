@@ -37,10 +37,8 @@ const varImg = {
 const varText = {
     initial: {
         opacity:0,
-        display:'none'
     },
     animate:{
-        display:'flex',
         opacity:1,
         transition:{
             delay:0.6,
@@ -74,8 +72,8 @@ const Inicio = ()=>{
         <div className="lg:w-90p lg:h-full sm:h-full w-full container-p lg:p-8 sm:p-7 lg:pb-2 pt-5 block m-auto">
             <Titulo/>
             <div className="p-5 lg:h-80p z-10 sm:h-80p w-full">
-                <div className="h-full p-5 lg:flex">
-                    <div className="lg:h-full lg:w-40p sm:h-full sm:w-full w-full">
+                <div className="h-full p-5 lg:flex block">
+                    <div className="lg:h-full lg:w-40p sm:h-full h-120 sm:w-full w-full">
                         <AnimatePresence>
                         {imagen===1?
                             <motion.img initial='initial' animate='animate' exit='exit' variants={varImg} className="lg:h-full rounded border-8 border-white block m-auto lg:w-auto sm:w-auto sm:h-full w-70p" src={ImgPresentacion}/>
@@ -97,47 +95,47 @@ const Inicio = ()=>{
                         :null}
                         </AnimatePresence>
                     </div>
-                    <div className="lg:w-60p hidden lg:block w-full rounded bx-shadown-black bg-white lg:h-full p-5">
-                        <h1 className="letrahoney lg:h-30p text-5xl text-center">EL DETALLE IDEAL</h1>
+                    <div className="lg:w-60p lg:block w-full rounded bx-shadown-black bg-white lg:h-full h-140 p-5">
+                        <h1 className="letrahoney lg:h-30p w-full text-5xl text-center">EL DETALLE IDEAL</h1>
                         <AnimatePresence>
                         {imagen===1?
-                            <motion.div initial='initial' exit='exit' animate='animate' variants={varText} className="letrahoney lg:h-70p text-2xl flex">
-                                <div className="lg:w-60p">
-                                    <div className="h-full flex items-center justify-center"><div className="text-center">No guardes nada para una ocasión especial,<br/> vivir es una ocasión especial!</div></div>
+                            <motion.div initial='initial' exit='exit' animate='animate' variants={varText} className="letrahoney lg:h-70p text-2xl lg:flex block">
+                                <div className="lg:w-60p w-full">
+                                    <div className="lg:h-full h-auto flex items-center justify-center"><div className="text-center">No guardes nada para una ocasión especial,<br/> vivir es una ocasión especial!</div></div>
                                 </div>
-                                <div className="lg:w-40p p-3 h-full"><img className="h-full block m-auto" alt='img presentacion' src={img1}/></div>
+                                <div className="lg:w-40p w-full p-3 h-full"><img className="lg:h-full lg:w-auto w-50p block m-auto" alt='img presentacion' src={img1}/></div>
                             </motion.div>
                         :null}
                         </AnimatePresence>
                         <AnimatePresence>
                         {imagen===2?
-                            <motion.div initial='initial' exit='exit' animate='animate' variants={varText} className="letrahoney lg:h-70p text-2xl flex">
-                                <div className="lg:w-60p">
+                            <motion.div initial='initial' exit='exit' animate='animate' variants={varText} className="letrahoney lg:h-70p text-2xl lg:flex block">
+                                <div className="lg:w-60p w-full">
                                     <div className="h-full flex justify-center items-center text-center"><div className="text-center">¡Celebra la vida! <br/>
                                     que todo te dá,<br/>
                                     que todo te brinda.</div></div>
                                 </div>
-                                <div className="lg:w-40p p-3 h-full"><img className="h-full block m-auto" alt='img presentacion 2' src={img2}/></div>
+                                <div className="lg:w-40p w-full p-3 h-full"><img className="lg:h-full lg:w-auto w-50p block m-auto" alt='img presentacion 2' src={img2}/></div>
                             </motion.div>
                         :null}
                         </AnimatePresence>
                         <AnimatePresence>
                         {imagen===3?
-                            <motion.div initial='initial' exit='exit' animate='animate' variants={varText} className="letrahoney lg:h-70p text-2xl flex">
+                            <motion.div initial='initial' exit='exit' animate='animate' variants={varText} className="letrahoney lg:h-70p text-2xl lg:flex block">
                                 <div className="lg:w-60p">
                                     <div className="h-full flex justify-center items-center text-center"><div className="text-center">LOS NIÑOS SON <br/>EL TESORO <br/>MAS GRANDE DEL MUNDO!</div></div>
                                 </div>
-                                <div className="lg:w-40p p-6 h-full"><img className="h-full block m-auto" alt='img presentacion 3' src={img3}/></div>
+                                <div className="lg:w-40p p-6 h-full"><img className="lg:h-full lg:w-auto w-50p block m-auto" alt='img presentacion 3' src={img3}/></div>
                             </motion.div>
                         :null}
                         </AnimatePresence>
                         <AnimatePresence>
                         {imagen===4?
-                            <motion.div initial='initial' exit='exit' animate='animate' variants={varText} className="letrahoney lg:h-70p text-2xl flex">
+                            <motion.div initial='initial' exit='exit' animate='animate' variants={varText} className="letrahoney lg:h-70p text-2xl lg:flex block">
                                 <div className="lg:w-60p">
                                     <div className="h-full flex justify-center items-center text-center"><div className="text-center">El mundo está en manos de aquellos que tienen el coraje de correr el riesgo y vivir sus sueños.</div></div>
                                 </div>
-                                <div className="lg:w-40p p-3 h-full"><img className="h-full block m-auto" alt='img presentacion 4' src={img4}/></div>
+                                <div className="lg:w-40p p-3 h-full"><img className="lg:h-full lg:w-auto w-50p block m-auto" alt='img presentacion 4' src={img4}/></div>
                             </motion.div>
                         :null}
                         </AnimatePresence>

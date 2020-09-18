@@ -27,6 +27,9 @@ html {
 .h-120{
   height: 28rem;
 }
+.h-140{
+  height: 32rem;
+}
 .loading {
     display: flex;
     animation-delay: 0s;
