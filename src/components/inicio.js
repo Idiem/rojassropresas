@@ -103,7 +103,7 @@ const Inicio = ()=>{
                         {imagen===1?
                             <motion.div initial='initial' exit='exit' animate='animate' variants={varText} className="letrahoney lg:h-70p text-2xl flex">
                                 <div className="lg:w-60p">
-                                    <div className="h-full flex justify-center items-center text-center">No guardes nada para una ocasión especial,<br/> vivir es una ocasión especial!</div>
+                                    <div className="h-full flex items-center justify-center"><div className="text-center">No guardes nada para una ocasión especial,<br/> vivir es una ocasión especial!</div></div>
                                 </div>
                                 <div className="lg:w-40p p-3 h-full"><img className="h-full block m-auto" alt='img presentacion' src={img1}/></div>
                             </motion.div>
@@ -113,9 +113,9 @@ const Inicio = ()=>{
                         {imagen===2?
                             <motion.div initial='initial' exit='exit' animate='animate' variants={varText} className="letrahoney lg:h-70p text-2xl flex">
                                 <div className="lg:w-60p">
-                                    <div className="h-full flex justify-center items-center text-center">¡Celebra la vida! <br/>
+                                    <div className="h-full flex justify-center items-center text-center"><div className="text-center">¡Celebra la vida! <br/>
                                     que todo te dá,<br/>
-                                    que todo te brinda.</div>
+                                    que todo te brinda.</div></div>
                                 </div>
                                 <div className="lg:w-40p p-3 h-full"><img className="h-full block m-auto" alt='img presentacion 2' src={img2}/></div>
                             </motion.div>
@@ -125,7 +125,7 @@ const Inicio = ()=>{
                         {imagen===3?
                             <motion.div initial='initial' exit='exit' animate='animate' variants={varText} className="letrahoney lg:h-70p text-2xl flex">
                                 <div className="lg:w-60p">
-                                    <div className="h-full flex justify-center items-center text-center">LOS NIÑOS SON <br/>EL TESORO <br/>MAS GRANDE DEL MUNDO!</div>
+                                    <div className="h-full flex justify-center items-center text-center"><div className="text-center">LOS NIÑOS SON <br/>EL TESORO <br/>MAS GRANDE DEL MUNDO!</div></div>
                                 </div>
                                 <div className="lg:w-40p p-6 h-full"><img className="h-full block m-auto" alt='img presentacion 3' src={img3}/></div>
                             </motion.div>
@@ -135,7 +135,7 @@ const Inicio = ()=>{
                         {imagen===4?
                             <motion.div initial='initial' exit='exit' animate='animate' variants={varText} className="letrahoney lg:h-70p text-2xl flex">
                                 <div className="lg:w-60p">
-                                    <div className="h-full flex justify-center items-center text-center">El mundo está en manos de aquellos que tienen el coraje de correr el riesgo y vivir sus sueños.</div>
+                                    <div className="h-full flex justify-center items-center text-center"><div className="text-center">El mundo está en manos de aquellos que tienen el coraje de correr el riesgo y vivir sus sueños.</div></div>
                                 </div>
                                 <div className="lg:w-40p p-3 h-full"><img className="h-full block m-auto" alt='img presentacion 4' src={img4}/></div>
                             </motion.div>
