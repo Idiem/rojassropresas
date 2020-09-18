@@ -11,6 +11,7 @@ function App() {
     <Router history={history}>
       <Switch>
         <Route exact path='/' component={Inicio}/>
+        <Route exact path='/producto' component={Producto}/>
         <Route exact path='/producto/:id' component={Producto}/>
         <Route path="/" component={NotFound} />
       </Switch>
