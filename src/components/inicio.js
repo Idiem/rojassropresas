@@ -64,8 +64,8 @@ const Inicio = ()=>{
         },6000);
     },[imagen]);
     return(
-        <DocumentTitle title='Inicio'>
-    <div className="bg-gray-200">
+        <DocumentTitle title='Inicio | 🌹 RS'>
+        <div className="bg-gray-200">
         <Header inicio={true}/>
         <Element name='inicio'>
       <div className="fondo sm:h-screen min-h-screen pt-32">

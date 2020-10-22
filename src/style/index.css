@@ -5,6 +5,45 @@
 html {
   behavior: smooth;
 }
+.top10p{
+  top: 20%;
+}
+.left10p{
+  left: 5%;
+}
+.rigthCerrar{
+  right: -10px;
+}
+.topCerrar{
+  top: -10px;
+}
+.h-25p{
+  height: 25%;
+}
+.coloreliminar{
+  background:#FA5353 ;
+}
+.colormas-menos{
+  background: #63BD76;
+}
+.w-10p{
+  width: 15%;
+}
+.w-70p{
+  width: 70%;
+}
+.w-40p{
+  width: 40%;
+}
+.w-60p{
+  width: 60%;
+}
+.coloragregar{
+  background: #75F8B0 ;
+}
+.coloraEliminarA{
+  background: #3DD3F8 ;
+}
 @font-face{
   font-family: 'Valentica';
   src: url('./hello_valentica/Hello\ Valentina.ttf');
@@ -18,6 +57,11 @@ html {
 }
 .letrahoney{
   font-family: 'honey';
+}
+.abajo-izquierda{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
 .fondo{
     background-image: url('../img/ideas-decorar-jardin.jpg');

@@ -8,14 +8,20 @@
     "@testing-library/user-event": "^7.2.1",
     "framer-motion": "^2.6.13",
     "history": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "nodemailer": "^6.4.14",
     "react": "^16.13.1",
     "react-document-title": "^2.0.3",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-scroll": "^1.8.1",
-    "react-use": "^15.3.4"
+    "react-toastify": "^6.0.9",
+    "react-use": "^15.3.4",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

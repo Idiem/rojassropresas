@@ -42,7 +42,7 @@ const ProductosL = (props)=>{
               </div>
               <div className="h-full mt-5 w-full p-2 overflow-hidden">
                   {productos.map(u=>
-                      <Link to={`/producto/${u.id}`} onClick={()=>props.changeId(u.id)} key={u.id}  className="lg:w-30p bg-white sm:w-45p w-full float-left p-2 bx-shadown-black sm:ml-6 sm:mt-0 mt-5 sm:mt-3 h-120">
+                      <Link to={`/producto/${u.id}`} onClick={props.changeId} key={u.id}  className="lg:w-30p bg-white sm:w-45p w-full float-left p-2 bx-shadown-black sm:ml-6 sm:mt-0 mt-5 sm:mt-3 h-120">
                           <div className="h-10p letrahoney tracking-widest text-2xl text-center">
                               {u.nombre}
                           </div>

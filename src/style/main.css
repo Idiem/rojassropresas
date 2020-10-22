@@ -55,7 +55,9 @@
     height: 0; /* 1 */
     overflow: visible; /* 2 */
   }
-  
+  .hbutton{
+    min-height:40px
+  }
   /**
    * 1. Correct the inheritance and scaling of font size in all browsers.
    * 2. Correct the odd `em` font sizing in all browsers.
@@ -10301,7 +10303,12 @@
   .h-0 {
     height: 0;
   }
-  
+  .h-foto-min{
+    min-height:250px
+  }
+  .h-foto-max{
+    max-height:300px
+  }
   .h-1 {
     height: 0.25rem;
   }
@@ -28341,8 +28348,26 @@
     .sm\:h-82 {
       height: 20rem;
     }
+    .sm\:h-foto-min{
+      min-height:250px
+    }
+    .sm\:h-foto-max{
+      max-height:300px
+    }
     .sm\:h-10p {
       height: 10%;
+    }
+    .sm\:h-70p {
+      height: 70%;
+    }
+    .sm\:h-25p {
+      height: 25%;
+    }
+    .sm\:h-33p {
+      height: 33%;
+    }
+    .sm\:h-minC {
+      min-height: 250px;
     }
     .sm\:h-60p {
       height: 60%;
@@ -28361,6 +28386,21 @@
     }
     .sm\:w-20p {
       width: 20%;
+    }
+    .sm\:w-30p {
+      width: 30%;
+    }
+    .sm\:h-33p {
+      height: 33%;
+    }
+    .sm\:h-48p {
+      height: 49.8%;
+    }
+    .sm\:w-70p {
+      width: 70%;
+    }
+    .sm\:w-25p {
+      width: 25%;
     }
     .sm\:w-full {
       width: 100%;

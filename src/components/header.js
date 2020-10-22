@@ -51,7 +51,7 @@ const Header = (props)=>{
             <>
             <AnimatePresence>
             {pageYOffset!==0?
-            <motion.div initial={{height:'20%'}} animate={{height:'15%',transition:{duration:0.5}}} className="z-50 bx-shadown-black bg-gray-700 w-full fixed ">
+            <motion.div initial={{height:'20%'}} animate={{height:'15%',transition:{duration:0.5}}} className="z-40 bx-shadown-black bg-gray-700 w-full fixed ">
                 <div className="container-p h-full block m-auto border-black">
                     <div className="lg:w-20p letrahoney text-2xl text-white sm:flex justify-center items-center float-left hidden h-full">
                         ROJAS SORPRESAS
@@ -79,7 +79,7 @@ const Header = (props)=>{
                 </div>
             </motion.div>
             :            
-            <motion.div initial={{height:'15%'}} animate={{height:'20%',transition:{duration:0.3}}}  className="z-50 bx-shadown-black w-full fixed ">
+            <motion.div initial={{height:'15%'}} animate={{height:'20%',transition:{duration:0.3}}}  className="z-40 bx-shadown-black w-full fixed ">
                 <div className="container-p h-full block flex m-auto border-black">
                     <Link to="inicio" smooth={true} className="justify-center items-center lg:w-33p flex">
                         <motion.div initial='inital' whileHover='hover' variants={variantsContainer} className="lg:h-40p w-80p cursor-pointer h-40p bg-white lg:flex p-1 rounded">
@@ -109,7 +109,7 @@ const Header = (props)=>{
             <>
             <AnimatePresence>
             {pageYOffset!==0?
-            <motion.div initial={{height:'20%'}} animate={{height:'15%',transition:{duration:0.5}}} className="z-50 bx-shadown-black bg-gray-700 w-full fixed ">
+            <motion.div initial={{height:'20%'}} animate={{height:'15%',transition:{duration:0.5}}} className="z-40 bx-shadown-black bg-gray-700 w-full fixed ">
                 <div className="container-p h-full block m-auto border-black">
                     <div className="lg:w-20p letrahoney text-2xl text-white sm:flex justify-center items-center float-left hidden h-full">
                         ROJAS SORPRESAS
@@ -121,12 +121,20 @@ const Header = (props)=>{
                             <motion.div initial='initial'  show='hover' variants={variantsChildren} className="justify-center items-center">INCIO</motion.div>
                         </motion.div>
                     </Links>
-                    <Link to="products" smooth={'true'} className="justify-center items-center lg:w-33p flex">
-                        <motion.div initial='inital' whileHover='hover' variants={variantsContainer} className="lg:h-40p w-80p cursor-pointer h-40p bg-white lg:flex rounded">
-                            <motion.div initial='initialIcon' show='hoverIcon' variants={variantsChildren} className="justify-center items-center h-full flex"><img alt='productos' src={productos} className="lg:h-80p h-full"/></motion.div>
-                            <motion.div initial='initial'  show='hover' variants={variantsChildren} className="justify-center items-center">PRODUCTOS</motion.div>
-                        </motion.div>
-                    </Link>
+                    {props.carrito?
+                    <Links to="/producto/Desayuno-Mesa-Grande" smooth={'true'} className="justify-center items-center lg:w-33p flex">
+                    <motion.div initial='inital' whileHover='hover' variants={variantsContainer} className="lg:h-40p w-80p cursor-pointer h-40p bg-white lg:flex rounded">
+                        <motion.div initial='initialIcon' show='hoverIcon' variants={variantsChildren} className="justify-center items-center h-full flex"><img alt='productos' src={productos} className="lg:h-80p h-full"/></motion.div>
+                        <motion.div initial='initial'  show='hover' variants={variantsChildren} className="justify-center items-center">PRODUCTOS</motion.div>
+                    </motion.div>
+                    </Links>
+                    :<Link to="products" smooth={'true'} className="justify-center items-center lg:w-33p flex">
+                    <motion.div initial='inital' whileHover='hover' variants={variantsContainer} className="lg:h-40p w-80p cursor-pointer h-40p bg-white lg:flex rounded">
+                        <motion.div initial='initialIcon' show='hoverIcon' variants={variantsChildren} className="justify-center items-center h-full flex"><img alt='productos' src={productos} className="lg:h-80p h-full"/></motion.div>
+                        <motion.div initial='initial'  show='hover' variants={variantsChildren} className="justify-center items-center">PRODUCTOS</motion.div>
+                    </motion.div>
+                    </Link>}
+                    
                     <Link to="contact" smooth={'true'} className="justify-center items-center lg:w-33p flex">
                         <motion.div initial='inital' whileHover='hover' variants={variantsContainer} className="lg:h-40p w-80p cursor-pointer h-40p bg-white lg:flex  rounded">
                             <motion.div initial='initialIcon' show='hoverIcon' variants={variantsChildren} className="justify-center items-center h-full flex"><img alt='contacto' src={contactanos} className="lg:h-80p h-full"/></motion.div>
@@ -137,7 +145,7 @@ const Header = (props)=>{
                 </div>
             </motion.div>
             :            
-            <motion.div initial={{height:'15%'}} animate={{height:'20%',transition:{duration:0.3}}}  className="z-50 bx-shadown-black w-full fixed ">
+            <motion.div initial={{height:'15%'}} animate={{height:'20%',transition:{duration:0.3}}}  className="z-40 bx-shadown-black w-full fixed ">
                 <div className="container-p h-full block flex m-auto border-black">
                     <Links to="/" smooth={'true'} className="justify-center items-center lg:w-33p flex">
                         <motion.div initial='inital' whileHover='hover' variants={variantsContainer} className="lg:h-40p w-80p cursor-pointer h-40p bg-white lg:flex p-1 rounded">
@@ -145,12 +153,20 @@ const Header = (props)=>{
                             <motion.div initial='initial'  show='hover' variants={variantsChildren} className="justify-center items-center">INCIO</motion.div>
                         </motion.div>
                     </Links>
-                    <Link to="products" smooth={'true'} className="justify-center items-center lg:w-33p flex">
-                        <motion.div initial='inital' whileHover='hover' variants={variantsContainer} className="lg:h-40p w-80p cursor-pointer h-40p bg-white lg:flex p-1 rounded">
-                            <motion.div initial='initialIcon' show='hoverIcon' variants={variantsChildren} className="justify-center items-center h-full flex"><img alt='productos' src={productos} className="lg:h-80p h-full"/></motion.div>
-                            <motion.div initial='initial'  show='hover' variants={variantsChildren} className="justify-center items-center">PRODUCTOS</motion.div>
-                        </motion.div>
-                    </Link>
+                    {props.carrito?
+                    <Links to="/producto/Desayuno-Mesa-Grande" smooth={'true'} className="justify-center items-center lg:w-33p flex">
+                    <motion.div initial='inital' whileHover='hover' variants={variantsContainer} className="lg:h-40p w-80p cursor-pointer h-40p bg-white lg:flex p-1 rounded">
+                        <motion.div initial='initialIcon' show='hoverIcon' variants={variantsChildren} className="justify-center items-center h-full flex"><img alt='productos' src={productos} className="lg:h-80p h-full"/></motion.div>
+                        <motion.div initial='initial'  show='hover' variants={variantsChildren} className="justify-center items-center">PRODUCTOS</motion.div>
+                    </motion.div>
+                    </Links>
+                    :<Link to="products" smooth={'true'} className="justify-center items-center lg:w-33p flex">
+                    <motion.div initial='inital' whileHover='hover' variants={variantsContainer} className="lg:h-40p w-80p cursor-pointer h-40p bg-white lg:flex p-1 rounded">
+                        <motion.div initial='initialIcon' show='hoverIcon' variants={variantsChildren} className="justify-center items-center h-full flex"><img alt='productos' src={productos} className="lg:h-80p h-full"/></motion.div>
+                        <motion.div initial='initial'  show='hover' variants={variantsChildren} className="justify-center items-center">PRODUCTOS</motion.div>
+                    </motion.div>
+                    </Link>}
+                    
                     <Link to="contact" smooth={'true'} className="justify-center items-center lg:w-33p flex">
                         <motion.div initial='inital' whileHover='hover' variants={variantsContainer} className="lg:h-40p w-80p cursor-pointer h-40p bg-white lg:flex p-1 rounded">
                             <motion.div initial='initialIcon' show='hoverIcon' variants={variantsChildren} className="justify-center items-center h-full flex"><img alt='contacto' src={contactanos} className="lg:h-80p h-full"/></motion.div>

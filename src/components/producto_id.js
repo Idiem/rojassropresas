@@ -1,32 +1,48 @@
 import React,{useEffect,useState} from 'react';
 import {useParams} from 'react-router-dom'
+import {useDispatch,useSelector} from 'react-redux'
 import productos from '../productos/index'
 import {Element,scroller} from 'react-scroll'
 import Header from './header'
-import whatsapp from '../img/whatsapp.png'
-import instragram from '../img/instagram.png'
 import Footer from './footer'
 import ProductosL from './productos'
 import DocumentTitle from 'react-document-title'
-const Producto = ()=>{
+import {AgregarProductoAction} from '../action/index'
+
+const Producto = (props)=>{
     const {id} = useParams()
-    const [Idp,setIdp] = useState(id);
+    const dispactch = useDispatch();
+    const ProductosCarrito = useSelector((store)=>store.productos);
     const [product,setProduct] = useState({})
-    useEffect(()=>{
-        for(let i=0;i<productos.length;i++){
-            if(productos[i].id===Idp){
-                setProduct(productos[i]);
-            }
-        }
-    },[Idp]);
-    const ChangeId = (id)=>{
-        setIdp(id);
+    const ChangeId = ()=>{
         scroller.scrollTo('inicio', {
             smooth: true,
         })
     }
+    const CONFIRMAR = async({precio,opciones,nombre,imagen})=>{
+        var ids;
+        if(ProductosCarrito.length<1){
+            ids = ProductosCarrito.length+1
+        }else{
+            ids = ProductosCarrito[ProductosCarrito.length-1].id + 1;
+        }
+        const canasta = {
+            precio,
+            productos:opciones.slice(),
+            id:ids,
+            nombre,
+            imagen
+        }
+        ProductosCarrito.push(canasta)
+        dispactch(AgregarProductoAction(ProductosCarrito));
+        props.history.push('/carrito');
+    }
+    useEffect(()=>{
+        const result = productos.find(productos=>productos.id===id);
+        setProduct(result)
+    },[id]);
     return(
-        <DocumentTitle title='Producto'>
+        <DocumentTitle title='Producto | 🌹 RS'>
         <div className="fondogra">
             <Header inicio={false}/>
             {!product.nombre?
@@ -48,18 +64,17 @@ const Producto = ()=>{
                         <div className="letrahoney sm:h-10p text-3xl text-center tracking-widest">{product.nombre}</div>
                         <div className="sm:h-80p p-5 letrahoney tracking-widest text-size-20">
                             {product.opcion1.map(u=>
-                                <div key={u} className="h-10p sm:text-left text-center">
-                                    - {u}
+                                <div key={u.nombre} className="h-10p sm:text-left text-center">
+                                    - {u.cantidad>1?u.cantidad:null} {u.nombre}
                                 </div>
                             )}
                         </div>
                         <div className="sm:h-10p sm:flex">
                             <div className="sm:w-50p w-full flex justify-center items-center text-2xl letrahoney tracking-widest">
-                                PIDELO POR
+                                $ {product.precio}
                             </div>
                             <div className="h-full sm:w-50p w-full flex">
-                                <a href="http://api.whatsapp.com/send?phone=573232121578" target="_blank" rel="noopener noreferrer" className="w-50p h-full"><img alt='img whatsapp' className="sm:h-full block m-auto w-50p sm:w-auto" src={whatsapp} /></a>
-                                <a href='https://www.instagram.com/rojas_sorpresas/' target='_blank' rel="noopener noreferrer" className="w-50p h-full"><img alt='img instagram' className="sm:h-full block m-auto w-50p sm:w-auto" src={instragram} /></a>
+                                <button onClick={()=>CONFIRMAR({precio:product.precio,opciones:product.opcion1,nombre:product.nombre,imagen:product.imagen})} className="w-full hbutton h-full text-center letrahoney tracking-widest rounded-bl-full bx-shadown-black bg-orange-600 text-white">AÑADIR CARRITO</button>
                             </div>
                         </div>
                     </div>
@@ -80,8 +95,8 @@ const Producto = ()=>{
                         <div className="letrahoney sm:h-10p text-3xl text-center tracking-widest">{product.nombre}</div>
                         <div className="sm:h-80p p-5 letrahoney tracking-widest text-size-20">
                             {product.opcion2.map(u=>
-                                <div key={u} className="h-10p sm:text-left text-center">
-                                    - {u}
+                                <div key={u.nombre} className="h-10p sm:text-left text-center">
+                                    - {u.cantidad>1?u.cantidad:null} {u.nombre}
                                 </div>
                             )}
                         </div>
@@ -90,8 +105,7 @@ const Producto = ()=>{
                                 PIDELO POR
                             </div>
                             <div className="h-full sm:w-50p w-full flex">
-                                <a href="http://api.whatsapp.com/send?phone=573232121578" target="_blank" rel="noopener noreferrer" className="w-50p h-full"><img alt='img whatsapp' className="sm:h-full block m-auto w-50p sm:w-auto" src={whatsapp} /></a>
-                                <a href='https://www.instagram.com/rojas_sorpresas/' target='_blank' rel="noopener noreferrer" className="w-50p h-full"><img alt='img instagram' className="sm:h-full block m-auto w-50p sm:w-auto" src={instragram} /></a>
+                                <button onClick={()=>CONFIRMAR({precio:product.precio,opciones:product.opcion2,nombre:product.nombre,imagen:product.imagen2})} className="w-full h-full text-center letrahoney tracking-widest rounded-bl-full bx-shadown-black bg-orange-600 text-white">AÑADIR CARRITO</button>
                             </div>
                         </div>
                     </div>
